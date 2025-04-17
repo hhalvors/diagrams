@@ -1,0 +1,11 @@
+dependencies:
+  - base >= 4.7 && < 5
+  - diagrams-lib
+  - diagrams-svg
+  - diagrams-contrib
+  - lens
+
+executables:
+  diagrams-exe:
+    main:                Main.hs
+    source-dirs:         app

@@ -1,0 +1,12 @@
+/Users/hhalvors/.ghcup/ghc/9.8.4/lib/ghc-9.8.4/lib/aarch64-osx-ghc-9.8.4/rts-1.0.2/include/ghcversion.h:
+  hash: 95162794a3bf5e6167631fdd41a509846597231d523d0f21a76713b1f801373c
+/Users/hhalvors/diagrams/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/diagrams-exe/autogen/Paths_diagrams.hs:
+  hash: c492dd5e5bea30501c6c288562356608bffc974bb98ff022ac0ed0f3d03f6dba
+/Users/hhalvors/diagrams/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/diagrams-exe/autogen/cabal_macros.h:
+  hash: 925dd04bb231c570a9b6846a744b23caf99c994b43381be35ffdb248d043daa8
+/Users/hhalvors/diagrams/app/Main.hs:
+  hash: 8e7636d272e20c708582252c86f44c1247befbbcf2296f0db2fb334bc97a3ea9
+/Users/hhalvors/diagrams/diagrams.cabal:
+  hash: 84f81b8f46969c90601da96348aaa6c4443caf1e3315f1f3dda0d89e217a2f21
+/Users/hhalvors/diagrams/package.yaml:
+  hash: bf2c449cd112b94d3ade773002bddaec517c0e743749cff214b47881ed20fabe
