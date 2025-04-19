@@ -6,17 +6,17 @@ import Diagrams.Prelude
 import Diagrams.Backend.SVG.CmdLine
 import Diagrams.Backend.SVG (renderSVG)
 
-
--- Deformation φ: identity on boundary, max push at center, horizontal only
 phi :: Double -> P2 Double -> P2 Double
 phi r p@(P (V2 x y))
   | dist >= r  = p
-  | otherwise  = p .+^ r2 (0.5 * bump, 0)  -- push right only
+  | otherwise  = p .+^ r2 (0.5 * bump, 0)
   where
     v     = p .-. origin
     dist  = norm v
     t     = dist / r
-    bump  = (1 - t^2)^2  -- max at center, 0 at edge
+    bump  = if t < 1
+              then exp ( - t^2 / (1 - t^2) )
+              else 0
 
 -- Helper to create a grid line from a list of points
 gridLine :: [P2 Double] -> Diagram B
@@ -43,8 +43,14 @@ deformedGrid r =
 trajectoryPoints :: [P2 Double]
 trajectoryPoints = map p2 [(0, -2), (0.2, -1), (0.5, 0), (0.7, 1), (0.9, 2)]
 
+-- A straight line through the origin, tilted right with slope m
 trajectoryCurve :: [P2 Double]
-trajectoryCurve = [ p2 (0.05 * t^2, t) | t <- [-2, -1.8 .. 2] ]
+trajectoryCurve =
+  [ p2 (m * t, t)
+  | t <- [-2, -1.9 .. 2]   -- you can refine the step-size if you like
+  ]
+  where
+    m = -0.1   -- change this to make the tilt shallower (smaller) or steeper (larger)
 
 trajectory :: Diagram B
 trajectory = fromVertices trajectoryCurve # lw thick # lc blue
