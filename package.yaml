@@ -7,5 +7,7 @@ dependencies:
 
 executables:
   diagrams-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
+    other-modules:
+      - FiniteFourier

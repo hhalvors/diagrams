@@ -11,7 +11,7 @@ build-type:     Simple
 executable diagrams-exe
   main-is: Main.hs
   other-modules:
-      Paths_diagrams
+      FiniteFourier
   hs-source-dirs:
       app
   build-depends:
